@@ -12,6 +12,7 @@ import { Categories } from './collections/Categories'
 import { Articles } from './collections/Articles'
 import sharp from 'sharp'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
+import { s3Storage } from '@payloadcms/storage-s3'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -38,7 +39,25 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   plugins: [
-    ...(process.env.BLOB_READ_WRITE_TOKEN
+    ...(process.env.S3_BUCKET
+      ? [
+          s3Storage({
+            collections: {
+              media: true,
+            },
+            bucket: process.env.S3_BUCKET,
+            config: {
+              credentials: {
+                accessKeyId: process.env.S3_ACCESS_KEY_ID || '',
+                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || '',
+              },
+              region: process.env.S3_REGION || 'us-east-1',
+              endpoint: process.env.S3_ENDPOINT,
+              forcePathStyle: true,
+            },
+          }),
+        ]
+      : process.env.BLOB_READ_WRITE_TOKEN
       ? [
           vercelBlobStorage({
             enabled: true,

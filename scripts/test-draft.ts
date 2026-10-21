@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import { getPayload } from 'payload'
-import config from './payload.config'
+import config from '../src/payload.config'
 
 async function runTest() {
   console.log('--- Testing Draft Security & Lifecycle ---')
@@ -22,6 +22,7 @@ async function runTest() {
           format: '',
           indent: 0,
           version: 1,
+          direction: 'ltr',
           children: [
             {
               type: 'paragraph',
@@ -39,7 +40,7 @@ async function runTest() {
             },
           ],
         },
-      },
+      } as any,
     },
     draft: true,
   })

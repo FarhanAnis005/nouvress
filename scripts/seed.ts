@@ -39,9 +39,13 @@ async function seed() {
   }
 
   // 2. Seed Default Admin User
+  const adminEmail = process.env.ADMIN_EMAIL || 'editor@nouvress.org'
+  const adminPassword = process.env.ADMIN_PASSWORD || 'EditorPassword2026!'
+  const adminName = process.env.ADMIN_NAME || 'Tasia Vance'
+
   const existingUsers = await payload.find({
     collection: 'users',
-    where: { email: { equals: 'editor@nouvress.org' } },
+    where: { email: { equals: adminEmail } },
     limit: 1,
   })
 
@@ -50,16 +54,16 @@ async function seed() {
     adminUser = await payload.create({
       collection: 'users',
       data: {
-        name: 'Tasia Vance',
-        email: 'editor@nouvress.org',
-        password: 'EditorPassword2026!',
+        name: adminName,
+        email: adminEmail,
+        password: adminPassword,
         role: 'admin',
       },
     })
-    console.log('Created admin user: editor@nouvress.org (Password: EditorPassword2026!)')
+    console.log(`Created admin user: ${adminEmail}`)
   } else {
     adminUser = existingUsers.docs[0]
-    console.log('Admin user editor@nouvress.org already exists.')
+    console.log(`Admin user ${adminEmail} already exists.`)
   }
 
   // 3. Seed Author

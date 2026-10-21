@@ -13,7 +13,7 @@ export const Masthead: React.FC = () => {
     <header className="masthead-wrapper">
       <div className="masthead-top-bar">
         <span>Vol. I — No. 1</span>
-        <span>{today}</span>
+        <span suppressHydrationWarning>{today}</span>
         <span>Independent & Free</span>
       </div>
 

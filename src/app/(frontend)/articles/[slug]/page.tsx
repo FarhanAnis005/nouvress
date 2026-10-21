@@ -2,6 +2,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 import { RichTextRenderer } from '@/components/RichTextRenderer'
 import type { Metadata } from 'next'
@@ -103,6 +104,11 @@ export default async function ArticlePage({ params, searchParams }: ArticlePageP
   const author = typeof article.author === 'object' ? article.author : null
   const authorName = author ? author.displayName : 'Staff Reporter'
 
+  const featuredImg =
+    typeof article.featuredImage === 'object' && article.featuredImage !== null
+      ? article.featuredImage
+      : null
+
   return (
     <article className="article-container">
       {isPreview && (
@@ -153,6 +159,28 @@ export default async function ArticlePage({ params, searchParams }: ArticlePageP
           )}
         </div>
       </header>
+
+      {/* Featured Lead Photograph */}
+      {featuredImg && featuredImg.url && (
+        <figure className="inline-figure" style={{ marginTop: '0', marginBottom: '24px' }}>
+          <Image
+            src={featuredImg.url}
+            alt={featuredImg.alt || article.title}
+            width={featuredImg.width || 800}
+            height={featuredImg.height || 500}
+            priority
+            style={{ width: '100%', height: 'auto', border: '1px solid var(--border-color)' }}
+          />
+          {(featuredImg.caption || featuredImg.photographerCredit) && (
+            <figcaption className="figure-caption-box">
+              {featuredImg.caption && <span>{featuredImg.caption}</span>}
+              {featuredImg.photographerCredit && (
+                <span className="figure-credit">{featuredImg.photographerCredit}</span>
+              )}
+            </figcaption>
+          )}
+        </figure>
+      )}
 
       {/* Rich-Text Body with Inline Images, Captions, Credits, Galleries, and Videos */}
       <RichTextRenderer content={article.body} />

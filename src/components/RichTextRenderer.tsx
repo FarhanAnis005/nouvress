@@ -130,7 +130,7 @@ export const RichTextRenderer: React.FC<RichTextRendererProps> = ({ content }) =
             alt={media.alt || 'Documentary photograph'}
             width={media.width || 800}
             height={media.height || 500}
-            style={{ width: '100%', height: 'auto' }}
+            style={{ maxWidth: '100%', maxHeight: '520px', width: 'auto', height: 'auto', margin: '0 auto' }}
           />
           {(caption || credit) && (
             <figcaption className="figure-caption-box">
@@ -154,7 +154,8 @@ export const RichTextRenderer: React.FC<RichTextRendererProps> = ({ content }) =
 
         const caption = blockFields.caption || media.caption
         const credit = blockFields.photographerCredit || media.photographerCredit
-        const widthClass = blockFields.width === 'wide' ? 'wide' : ''
+        const isWide = blockFields.width === 'wide'
+        const widthClass = isWide ? 'wide' : ''
 
         return (
           <figure key={index} className={`inline-figure ${widthClass}`}>
@@ -163,7 +164,13 @@ export const RichTextRenderer: React.FC<RichTextRendererProps> = ({ content }) =
               alt={media.alt || 'Documentary photograph'}
               width={media.width || 800}
               height={media.height || 500}
-              style={{ width: '100%', height: 'auto' }}
+              style={{
+                maxWidth: '100%',
+                maxHeight: isWide ? '580px' : '520px',
+                width: 'auto',
+                height: 'auto',
+                margin: '0 auto',
+              }}
             />
             {(caption || credit) && (
               <figcaption className="figure-caption-box">

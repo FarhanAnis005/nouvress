@@ -162,14 +162,14 @@ export default async function ArticlePage({ params, searchParams }: ArticlePageP
 
       {/* Featured Lead Photograph */}
       {featuredImg && featuredImg.url && (
-        <figure className="inline-figure" style={{ marginTop: '0', marginBottom: '24px' }}>
+        <figure className="featured-lead-figure">
           <Image
             src={featuredImg.url}
             alt={featuredImg.alt || article.title}
             width={featuredImg.width || 800}
             height={featuredImg.height || 500}
             priority
-            style={{ width: '100%', height: 'auto', border: '1px solid var(--border-color)' }}
+            style={{ maxWidth: '100%', maxHeight: '520px', width: 'auto', height: 'auto' }}
           />
           {(featuredImg.caption || featuredImg.photographerCredit) && (
             <figcaption className="figure-caption-box">

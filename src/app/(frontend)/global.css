@@ -357,29 +357,48 @@ hr.newspaper-rule-dotted {
   margin-bottom: 0.4em;
 }
 
-/* Inline Photographs & Figures */
-.inline-figure {
-  margin: 1.75em 0;
+/* Inline Photographs & Featured Figures */
+.inline-figure,
+.featured-lead-figure {
+  margin: 2em 0;
   clear: both;
+  text-align: center;
 }
 
-.inline-figure img {
+.featured-lead-figure {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.inline-figure img,
+.featured-lead-figure img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  max-height: 520px;
+  width: auto;
   height: auto;
+  margin: 0 auto;
+  object-fit: contain;
   border: 1px solid var(--border-color);
+  background-color: #f7f7f7;
 }
 
 .inline-figure.wide {
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.inline-figure.wide img {
+  max-height: 580px;
 }
 
 .figure-caption-box {
-  margin-top: 6px;
+  margin: 8px auto 0;
+  max-width: 600px;
+  text-align: left;
   font-family: var(--font-sans);
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.45;
   color: #333333;
 }
 

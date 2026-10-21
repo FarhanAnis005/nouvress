@@ -15,6 +15,9 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) for the public site.
 Open [http://localhost:3000/admin](http://localhost:3000/admin) for the Payload CMS admin panel.
+Default credentials (configured in `.env` via `ADMIN_EMAIL` and `ADMIN_PASSWORD`):
+- Email: `editor@nouvress.org`
+- Password: `EditorPassword2026!`
 
 ### Run Automated Lifecycle Tests
 ```bash

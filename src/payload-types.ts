@@ -165,6 +165,7 @@ export interface Media {
    * Private verification, contact, or licensing notes visible only to logged-in editors.
    */
   internalEditorialNotes?: string | null;
+  _objectKey?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -399,6 +400,7 @@ export interface MediaSelect<T extends boolean = true> {
   photographerCredit?: T;
   sourceRightsNote?: T;
   internalEditorialNotes?: T;
+  _objectKey?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;

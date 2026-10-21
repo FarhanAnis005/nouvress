@@ -30,6 +30,7 @@ export default buildConfig({
     meta: {
       titleSuffix: '- Student Journalism Publication Admin',
     },
+    suppressHydrationWarning: true,
   },
   collections: [Users, Media, Authors, Categories, Articles],
   editor: lexicalEditor(),

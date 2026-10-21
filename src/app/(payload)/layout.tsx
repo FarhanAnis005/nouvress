@@ -24,7 +24,16 @@ const serverFunction: ServerFunctionClient = async function (args) {
 }
 
 const Layout = ({ children }: Args) => (
-  <RootLayout config={config} importMap={importMap} serverFunction={serverFunction}>
+  <RootLayout
+    config={config}
+    importMap={importMap}
+    serverFunction={serverFunction}
+    htmlProps={{
+      suppressHydrationWarning: true,
+      'data-gramm': 'false',
+      'data-enable-grammarly': 'false',
+    } as any}
+  >
     {children}
   </RootLayout>
 )

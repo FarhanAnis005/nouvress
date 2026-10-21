@@ -9,7 +9,6 @@ export const Footer: React.FC = () => {
         <li><Link href="/about">About This Publication</Link></li>
         <li><Link href="/contact">Contact &amp; Submissions</Link></li>
         <li><Link href="/corrections">Policy on Corrections</Link></li>
-        <li><Link href="/admin">Staff Dashboard</Link></li>
       </ul>
 
       <p className="footer-colophon">

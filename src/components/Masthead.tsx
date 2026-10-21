@@ -36,7 +36,6 @@ export const Masthead: React.FC = () => {
             <li><Link href="/category/student-perspectives">Perspectives</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/corrections">Corrections</Link></li>
-            <li><Link href="/admin">Editor Login</Link></li>
           </ul>
         </nav>
       </div>

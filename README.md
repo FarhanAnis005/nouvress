@@ -3,30 +3,30 @@
 
 Welcome to **NOUVRESS**, an independent student-run publication dedicated to documentary journalism, campus protests, in-depth interviews, photo essays, and student movements.
 
-This website was purpose-built so that student journalists can write, edit, upload photography, and publish stories with **zero technical or coding knowledge**. The writing dashboard looks and feels just like working in Microsoft Word or Google Docs.
+This website was purpose-built so that student journalists can write, edit, upload photography, and publish stories with **zero technical or coding knowledge**. The writing dashboard looks and feels just like working in modern document editors (such as Notion, Microsoft Word, or Google Docs).
 
 ---
 
 ## 📑 Table of Contents
 
 1. [At a Glance: What is NOUVRESS?](#1-at-a-glance-what-is-nouvress)
-2. [Starting the Website on Your Computer (Quick Start)](#2-starting-the-website-on-your-computer-quick-start)
-3. [How to Log In to the Newsroom Dashboard](#3-how-to-log-in-to-the-newsroom-dashboard)
-4. [Writing & Publishing a Story (Step-by-Step)](#4-writing--publishing-a-story-step-by-step)
+2. [How to Log In to the Newsroom Dashboard](#2-how-to-log-in-to-the-newsroom-dashboard)
+3. [Writing & Publishing a Story (Step-by-Step)](#3-writing--publishing-a-story-step-by-step)
    - [Starting a New Story](#step-1-starting-a-new-story)
    - [Adding the Lead Photo (Featured Image)](#step-2-adding-the-lead-photo)
-   - [Writing Your Body Text & Quotes](#step-3-writing-your-body-text--quotes)
+   - [Writing Your Body Text & The Slash (/) Commands](#step-3-writing-your-body-text--the-slash--commands)
    - [Adding Photos Between Paragraphs](#step-4-adding-photos-between-paragraphs)
    - [Creating a Photo Essay or Gallery](#step-5-creating-a-photo-essay-or-gallery)
    - [Embedding Video Footage](#step-6-embedding-video-footage)
-5. [Saving Drafts, Previewing, and Hitting Publish](#5-saving-drafts-previewing-and-hitting-publish)
-6. [Updating a Story After It's Published](#6-updating-a-story-after-its-published)
-7. [Protecting Student Reporters (Pseudonyms & Safety)](#7-protecting-student-reporters-pseudonyms--safety)
-8. [Managing Your Newsroom Team (Writers & Editors)](#8-managing-your-newsroom-team-writers--editors)
-9. [Handling Corrections Transparently](#9-handling-corrections-transparently)
-10. [Where Your Words & Photos Are Stored (The Cloud)](#10-where-your-words--photos-are-stored-the-cloud)
-11. [How the Website Goes Live to the Public (Hosting)](#11-how-the-website-goes-live-to-the-public-hosting)
-12. [Frequently Asked Questions & Troubleshooting (FAQ)](#12-frequently-asked-questions--troubleshooting-faq)
+   - [💡 How to Navigate & What To Do If You Get Stuck in a Block](#-how-to-navigate--what-to-do-if-you-get-stuck-in-a-block)
+4. [Saving Drafts, Previewing, and Hitting Publish](#4-saving-drafts-previewing-and-hitting-publish)
+5. [Updating a Story After It's Published](#5-updating-a-story-after-its-published)
+6. [Protecting Student Reporters (Pseudonyms & Safety)](#6-protecting-student-reporters-pseudonyms--safety)
+7. [Managing Your Newsroom Team (Writers & Editors)](#7-managing-your-newsroom-team-writers--editors)
+8. [Handling Corrections Transparently](#8-handling-corrections-transparently)
+9. [Where Your Words & Photos Are Stored (The Cloud)](#9-where-your-words--photos-are-stored-the-cloud)
+10. [How the Website Goes Live to the Public (Hosting)](#10-how-the-website-goes-live-to-the-public-hosting)
+11. [Frequently Asked Questions & Troubleshooting (FAQ)](#11-frequently-asked-questions--troubleshooting-faq)
 
 ---
 
@@ -39,51 +39,29 @@ This website was purpose-built so that student journalists can write, edit, uplo
 
 ---
 
-## 2. Starting the Website on Your Computer (Quick Start)
-
-If you are running the website locally on your laptop:
-
-1. **Open your Terminal application:**
-   - **Mac:** Press `Command + Space`, type `Terminal`, and hit `Enter`.
-   - **Windows:** Search for `PowerShell` or `Command Prompt` in the Start menu.
-2. **Move into the project folder:**
-   ```bash
-   cd path/to/nouvress
-   ```
-3. **Start the site:**
-   ```bash
-   npm run dev
-   ```
-4. **Open your web browser** (Safari, Chrome, Firefox, or Edge) and visit:
-   - **Public News Website:** [http://localhost:3000](http://localhost:3000)
-   - **Staff Writing Dashboard:** [http://localhost:3000/admin](http://localhost:3000/admin)
-
-> 💡 **Keep Terminal Open:** As long as that Terminal window is open, your local website is live. When you are done working, press `Control + C` in the Terminal to turn it off.
-
----
-
-## 3. How to Log In to the Newsroom Dashboard
+## 2. How to Log In to the Newsroom Dashboard
 
 To keep the public front page clean and focused on news, **there is no public "Login" button** on the website. Readers only see stories.
 
 To access the staff writing room:
 
-1. Open your web browser.
-2. In the address bar at the very top, type:
-   - **When working on your computer:** `http://localhost:3000/admin`
-   - **When the site is live on the internet:** `https://yourdomain.org/admin`
+1. Open your web browser (Chrome, Safari, Firefox, Edge, etc.).
+2. In the address bar at the very top, go to your publication address followed by `/admin`:
+   ```text
+   https://yourdomain.org/admin
+   ```
 3. Enter your staff email and password.
 4. Click **Log In**.
 
 > 🔒 **Security Notice for Staff Logins:**
 > - Staff login credentials are strictly private and should **never** be published publicly or shared outside the newsroom.
-> - When running locally, your administrator credentials are set privately in your personal `.env` file on your computer (which is protected and never shared or uploaded to GitHub).
+> - Your login details are provided directly and privately to you by your lead editor.
 > - Once logged in, any editor can change their password at any time by clicking **Account** at the bottom of the left sidebar.
 > - To grant access to fellow student reporters or editors, an administrator can create separate accounts with custom passwords directly under **Users** in the dashboard.
 
 ---
 
-## 4. Writing & Publishing a Story (Step-by-Step)
+## 3. Writing & Publishing a Story (Step-by-Step)
 
 ### Step 1: Starting a New Story
 1. In the left navigation menu of the dashboard, click **Articles**.
@@ -92,7 +70,7 @@ To access the staff writing room:
    - **Headline (Required):** The title of your article (e.g., *"Students Hold 36-Hour Teach-In on Quad"*).
    - **URL Slug:** This is the web address ending for your article (e.g., `students-teach-in-quad`). It fills in automatically as you type your headline, but you can tweak it if you like.
    - **Subtitle / Standfirst (Optional):** A 1–2 sentence summary that appears in elegant italics directly beneath the headline.
-   - **Author / Byline (Required):** Select the reporter who wrote the story from the dropdown. *(To add a new reporter, see Section 8).*
+   - **Author / Byline (Required):** Select the reporter who wrote the story from the dropdown. *(To add a new reporter, see Section 7).*
    - **Categories:** Check one or more categories (*Reporting*, *Interviews*, *Photo Essays*, *Opinion*, *Student Perspectives*).
 
 ---
@@ -110,55 +88,94 @@ Right below the categories, you will see the **Featured Image / Thumbnail** box.
 
 ---
 
-### Step 3: Writing Your Body Text & Quotes
-Scroll down to the **Article Content** box. You can write your story directly here, or copy and paste it from Google Docs or Word.
+### Step 3: Writing Your Body Text & The Slash (/) Commands
+Scroll down to the **Article Content** box. You can write your story directly here, or copy and paste text from Google Docs or Word.
 
-- **Paragraphs:** Just press `Enter` to start a new paragraph.
-- **Bold & Italics:** Highlight any text and click the **B** or *I* icon on the floating toolbar.
-- **Section Headings:** Highlight text and select **Heading 2** or **Heading 3** to break long investigations into readable chapters.
-- **Pull Quotes & Blockquotes:** Highlight a student quote and click the quotation mark icon (`"`) to turn it into an indented, elegant newspaper quote block.
-- **Bulleted / Numbered Lists:** Use the list buttons on the toolbar for student demands, timelines, or meeting agendas.
+#### How to Format Text & Insert Anything
+The editor uses a modern, keyboard-friendly **Slash (`/`) Command System** (just like Notion or Slack):
+1. Press `Enter` to start on a fresh, empty line.
+2. Type **`/`** (forward slash) on your keyboard.
+3. An instant menu pops up showing all available blocks and formatting tools!
+4. You can scroll through the list with your arrow keys or mouse, or simply start typing what you want (e.g., typing `/photo` jumps straight to photo insertion).
+5. Press `Enter` or click on the item to insert it.
+
+#### Quick Slash (`/`) Shortcuts Cheatsheet
+| Type This on a Blank Line | What It Inserts |
+| :--- | :--- |
+| **`/photo`** or **`/inline`** | **Inline Photograph** (insert a documentary photo between paragraphs) |
+| **`/gallery`** | **Photo Essay / Gallery** (multiple photos in stacked or 2-column layout) |
+| **`/video`** | **Embedded Video** (YouTube or Vimeo video box) |
+| **`/h2`** or **`/heading 2`** | Section Title (H2) |
+| **`/h3`** or **`/heading 3`** | Subsection Title (H3) |
+| **`/quote`** | Indented newspaper quote block for student interviews |
+| **`/bullet`** | Bulleted list (for student demands, key points) |
+| **`/number`** | Numbered list (for timelines or chronological steps) |
+| **`/divider`** or **`/hr`** | Horizontal dividing line between article sections |
+
+#### Formatting Text on the Fly (Bold, Italics, Links)
+- **Bold & Italics:** Highlight any word or sentence with your mouse. A floating toolbar appears right above your selection with **B** (Bold), *I* (Italics), <u>U</u> (Underline), and 🔗 (Hyperlink).
 
 ---
 
 ### Step 4: Adding Photos Between Paragraphs
-You are never limited to just one top photo. You can drop photographs anywhere between paragraphs:
+You are never limited to just one top photo. You can drop documentary photographs anywhere between paragraphs:
 
-1. Press `Enter` to create a blank line between two paragraphs.
-2. Click the **+** (plus icon) that appears on the toolbar.
-3. Select **Inline Photograph**.
-4. Upload or choose your photo.
-5. Enter the **Caption** and **Photographer Credit**.
-6. Choose the **Display Width**:
-   - **Standard Column:** Matches the exact width of your written text.
-   - **Wide Editorial:** Stretches slightly wider than the text for dramatic, expansive shots.
-7. Click below the photo to continue writing your next paragraph.
+1. Press `Enter` to create a fresh line where you want the photo.
+2. Type **`/`** (forward slash) and select **Inline Photograph** (or type `/photo` and hit `Enter`).
+3. An inline photo block will appear in your article.
+4. Click **Choose existing** (to pick an image you already uploaded) or **Upload new** (to upload a photo from your computer).
+5. Enter a **Caption** (e.g., *"Demonstrators assemble on the quad steps."*).
+6. Enter a **Photographer Credit** (e.g., `PHOTO: MARCUS CHEN / NOUVRESS`).
+7. Choose your **Display Width**:
+   - **Standard Column:** Matches the exact width of your reading text.
+   - **Wide Editorial:** Stretches slightly wider than the text column for dramatic, landscape documentary shots.
+8. To resume writing, click into the empty space directly beneath the photo box and continue typing.
 
 ---
 
 ### Step 5: Creating a Photo Essay or Gallery
-For visual-first reporting, protest galleries, or campus art exhibitions:
+For stories focused primarily on visual journalism, campus art exhibitions, or documentary coverage of a rally:
 
-1. On a blank line, click the **+** (plus icon) and select **Photo Essay / Gallery**.
-2. Type an optional **Gallery Title** (e.g., *"Faces of the Movement: Autumn 2026"*).
-3. Add as many photographs as you want. Each photo can have its own individual caption and credit.
-4. Pick your layout style:
-   - **Documentary Stacked:** Displays large, high-impact photos one after another down the page.
-   - **Two-Column Contact Sheet:** Places images side-by-side in a classic 2-column newspaper grid.
+1. Press `Enter` to start on a new empty line.
+2. Type **`/`** (forward slash) and select **Photo Essay / Gallery** (or type `/gallery` and hit `Enter`).
+3. Type an optional **Gallery Title** (e.g., *"Faces from the Picket Line: Autumn 2026"*).
+4. Click **Add Slide / Photo** to add your pictures:
+   - For each photo, you can enter an individual **Caption** and **Photographer Credit**.
+5. Select your layout style:
+   - **Documentary Stacked:** A vertical sequence of large, striking documentary photographs down the page.
+   - **Two-Column Contact Sheet:** A neat 2-column side-by-side grid reminiscent of a photographer's contact sheet.
 
 ---
 
 ### Step 6: Embedding Video Footage
-If your reporters captured video of speeches, rallies, or press conferences:
+If your reporters recorded speeches, rallies, or press conferences:
 
-1. On a blank line, click the **+** (plus icon) and choose **Embedded Video**.
-2. Paste the public web link to the video from **YouTube** or **Vimeo** (e.g., `https://www.youtube.com/watch?v=...`).
-3. Add an optional caption and videographer credit.
-4. The website creates a clean, responsive video box that works smoothly on both smartphones and desktop screens without tracking readers.
+1. Press `Enter` to start on a new empty line.
+2. Type **`/`** (forward slash) and select **Embedded Video** (or type `/video` and hit `Enter`).
+3. Paste the URL of the video from **YouTube** or **Vimeo** (e.g., `https://www.youtube.com/watch?v=...`).
+4. Add an optional caption and videographer credit.
+5. The website automatically embeds a clean, responsive video box without tracking scripts.
 
 ---
 
-## 5. Saving Drafts, Previewing, and Hitting Publish
+### 💡 How to Navigate & What To Do If You Get Stuck in a Block
+
+When working with photos, galleries, or videos inside your article, here are handy tips so you never get stuck:
+
+- **How to get out of a photo block and keep typing:**  
+  Once you finish filling in a photo's caption or credit, simply **click in the blank area below the block**, or press the `Down Arrow` key on your keyboard until your cursor moves past the block onto a fresh paragraph line.
+- **How to add a paragraph between two photos:**  
+  Click on the line just above or below the photo and press `Enter`. A new blank text line will appear where you can type normal prose or use `/` again.
+- **How to delete a photo or block:**  
+  Click on the photo or gallery block to highlight it. Then press `Backspace` or `Delete` on your keyboard, or click the small trash can / delete icon in the block's top corner.
+- **How to move or reorder blocks:**  
+  Hover over the block; grab the drag handle (the dots on the side) and drag it up or down to place it between any other paragraphs.
+- **Cancel a slash menu:**  
+  If you typed `/` by mistake, simply press `Escape` or `Backspace` to dismiss the menu and resume normal typing.
+
+---
+
+## 4. Saving Drafts, Previewing, and Hitting Publish
 
 At the bottom of your screen, you will see your control buttons:
 
@@ -180,7 +197,7 @@ At the bottom of your screen, you will see your control buttons:
 
 ---
 
-## 6. Updating a Story After It's Published
+## 5. Updating a Story After It's Published
 
 Breaking news often evolves throughout the day as university officials respond or new facts emerge.
 
@@ -193,7 +210,7 @@ Breaking news often evolves throughout the day as university officials respond o
 
 ---
 
-## 7. Protecting Student Reporters (Pseudonyms & Safety)
+## 6. Protecting Student Reporters (Pseudonyms & Safety)
 
 Student journalists often cover contentious protests, labor strikes, or administrative investigations where reporting under their legal name could expose them to disciplinary retaliation, doxxing, or employer blacklisting.
 
@@ -211,7 +228,7 @@ On the published story, their pen name will be displayed alongside a discreet, r
 
 ---
 
-## 8. Managing Your Newsroom Team (Writers & Editors)
+## 7. Managing Your Newsroom Team (Writers & Editors)
 
 Your dashboard separates **Writers (Authors)** from **Website Staff (Users)**:
 
@@ -233,7 +250,7 @@ Your dashboard separates **Writers (Authors)** from **Website Staff (Users)**:
 
 ---
 
-## 9. Handling Corrections Transparently
+## 8. Handling Corrections Transparently
 
 Trust is the single most valuable asset of an independent student newspaper. NOUVRESS never "stealth-edits" or quietly deletes mistakes.
 
@@ -247,7 +264,7 @@ If an article contains an inaccurate name, misspelled title, or incorrect fact:
 
 ---
 
-## 10. Where Your Words & Photos Are Stored (The Cloud)
+## 9. Where Your Words & Photos Are Stored (The Cloud)
 
 You never have to worry about losing your articles or photographs if someone's laptop breaks or gets lost:
 
@@ -258,7 +275,7 @@ You never have to worry about losing your articles or photographs if someone's l
 
 ---
 
-## 11. How the Website Goes Live to the Public (Hosting)
+## 10. How the Website Goes Live to the Public (Hosting)
 
 When you are ready to connect NOUVRESS to your real web address:
 
@@ -272,7 +289,7 @@ When you are ready to connect NOUVRESS to your real web address:
 
 ---
 
-## 12. Frequently Asked Questions & Troubleshooting (FAQ)
+## 11. Frequently Asked Questions & Troubleshooting (FAQ)
 
 ### Q: Why isn't there a "Login" link on the home page?
 > **Answer:** This is by design! Having no public login link keeps the front page looking like a genuine, uncluttered early-web newspaper, and prevents automated bots from finding your login page. Editors simply go directly to `/admin` in their browser address bar.

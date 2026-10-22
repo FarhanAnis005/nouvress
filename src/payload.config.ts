@@ -23,15 +23,23 @@ function resolvePostgresUrl(rawUrl: string): string {
     const parsed = new URL(rawUrl)
     // Direct Supabase hostname (db.<project-ref>.supabase.co) resolves to IPv6-only,
     // which causes 'getaddrinfo ENOTFOUND' on serverless platforms (Vercel / AWS Lambda).
-    // Automatically rewrite to Supabase's IPv4 connection pooler:
+    // Automatically rewrite to Supabase's IPv4 connection pooler in Transaction Mode (6543):
     if (parsed.hostname.startsWith('db.') && parsed.hostname.endsWith('.supabase.co')) {
       const projectRef = parsed.hostname.split('.')[1]
       const region = process.env.S3_REGION || 'eu-west-1'
       parsed.hostname = `aws-0-${region}.pooler.supabase.com`
-      parsed.port = '5432'
+      parsed.port = '6543'
       if (!parsed.username.includes('.')) {
         parsed.username = `${parsed.username}.${projectRef}`
       }
+      parsed.searchParams.delete('sslmode')
+      return parsed.toString()
+    }
+
+    // If using the Supabase pooler on port 5432 (Session Mode), switch to 6543 (Transaction Mode)
+    // to prevent '(EMAXCONNSESSION) max clients reached in session mode' errors under serverless load:
+    if (parsed.hostname.includes('.pooler.supabase.com') && (parsed.port === '5432' || !parsed.port)) {
+      parsed.port = '6543'
       parsed.searchParams.delete('sslmode')
       return parsed.toString()
     }
@@ -100,6 +108,9 @@ export default buildConfig({
     ? postgresAdapter({
         pool: {
           connectionString: dbUrl,
+          max: 4,
+          idleTimeoutMillis: 5000,
+          connectionTimeoutMillis: 5000,
         },
       })
     : sqliteAdapter({

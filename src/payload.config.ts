@@ -17,7 +17,33 @@ import { s3Storage } from '@payloadcms/storage-s3'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-const dbUrl = process.env.DATABASE_URL || process.env.DATABASE_URI || ''
+function resolvePostgresUrl(rawUrl: string): string {
+  if (!rawUrl) return rawUrl
+  try {
+    const parsed = new URL(rawUrl)
+    // Direct Supabase hostname (db.<project-ref>.supabase.co) resolves to IPv6-only,
+    // which causes 'getaddrinfo ENOTFOUND' on serverless platforms (Vercel / AWS Lambda).
+    // Automatically rewrite to Supabase's IPv4 connection pooler:
+    if (parsed.hostname.startsWith('db.') && parsed.hostname.endsWith('.supabase.co')) {
+      const projectRef = parsed.hostname.split('.')[1]
+      const region = process.env.S3_REGION || 'eu-west-1'
+      parsed.hostname = `aws-0-${region}.pooler.supabase.com`
+      parsed.port = '5432'
+      if (!parsed.username.includes('.')) {
+        parsed.username = `${parsed.username}.${projectRef}`
+      }
+      parsed.searchParams.delete('sslmode')
+      return parsed.toString()
+    }
+  } catch {
+    // If invalid URL structure, fallback to raw input
+  }
+  return rawUrl
+}
+
+const rawDbUrl =
+  process.env.DATABASE_URL || process.env.DATABASE_URI || process.env.POSTGRES_URL || ''
+const dbUrl = resolvePostgresUrl(rawDbUrl)
 const isPostgres = dbUrl.startsWith('postgres://') || dbUrl.startsWith('postgresql://')
 const sqliteUrl = dbUrl || `file:${path.resolve(process.cwd(), 'local.db')}`
 

@@ -25,8 +25,7 @@ This website was purpose-built so that student journalists can write, edit, uplo
 7. [Managing Your Newsroom Team (Writers & Editors)](#7-managing-your-newsroom-team-writers--editors)
 8. [Handling Corrections Transparently](#8-handling-corrections-transparently)
 9. [Where Your Words & Photos Are Stored (The Cloud)](#9-where-your-words--photos-are-stored-the-cloud)
-10. [How the Website Goes Live to the Public (Hosting)](#10-how-the-website-goes-live-to-the-public-hosting)
-11. [Frequently Asked Questions & Troubleshooting (FAQ)](#11-frequently-asked-questions--troubleshooting-faq)
+10. [Frequently Asked Questions & Troubleshooting (FAQ)](#10-frequently-asked-questions--troubleshooting-faq)
 
 ---
 

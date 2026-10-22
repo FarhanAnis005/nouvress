@@ -30,7 +30,7 @@ export default async function HomePage() {
     <div>
       <aside className="editor-notice">
         <strong>Editorial Dispatch:</strong>
-        NOUVRESS is an uncensored, independent student press project dedicated to original investigative reporting, student perspectives, documentary photography, and transparent campus coverage.
+        NOUVRES is an uncensored, independent student press project dedicated to original investigative reporting, student perspectives, documentary photography, and transparent campus coverage.
       </aside>
 
       <hr className="newspaper-rule" />

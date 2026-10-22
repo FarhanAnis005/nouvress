@@ -1,7 +1,7 @@
-# 📰 NOUVRESS — Independent Student Journalism
+# 📰 NOUVRES — Independent Student Journalism
 ### *The Complete Handbook & Guide for Writers, Photographers, and Editors*
 
-Welcome to **NOUVRESS**, an independent student-run publication dedicated to documentary journalism, campus protests, in-depth interviews, photo essays, and student movements.
+Welcome to **NOUVRES**, an independent student-run publication dedicated to documentary journalism, campus protests, in-depth interviews, photo essays, and student movements.
 
 This website was purpose-built so that student journalists can write, edit, upload photography, and publish stories with **zero technical or coding knowledge**. The writing dashboard looks and feels just like working in modern document editors (such as Notion, Microsoft Word, or Google Docs).
 
@@ -9,7 +9,7 @@ This website was purpose-built so that student journalists can write, edit, uplo
 
 ## 📑 Table of Contents
 
-1. [At a Glance: What is NOUVRESS?](#1-at-a-glance-what-is-nouvress)
+1. [At a Glance: What is NOUVRES?](#1-at-a-glance-what-is-nouvres)
 2. [How to Log In to the Newsroom Dashboard](#2-how-to-log-in-to-the-newsroom-dashboard)
 3. [Writing & Publishing a Story (Step-by-Step)](#3-writing--publishing-a-story-step-by-step)
    - [Starting a New Story](#step-1-starting-a-new-story)
@@ -29,7 +29,7 @@ This website was purpose-built so that student journalists can write, edit, uplo
 
 ---
 
-## 1. At a Glance: What is NOUVRESS?
+## 1. At a Glance: What is NOUVRES?
 
 - **Early-Web / 1990s Newspaper Aesthetic:** The website intentionally uses a stark, high-contrast, early-web news design (clean white background, classic serif reading typography, underlined blue links, and focused reading columns). There are no flashing ads, no popups, and no distracting animations—putting student writing and documentary photography first.
 - **Strictly Student-Produced:** We report on real events with eyewitness reporting. We never publish synthetic or AI-generated journalism.
@@ -81,7 +81,7 @@ Right below the categories, you will see the **Featured Image / Thumbnail** box.
 2. Drag and drop your photograph into the window.
 3. **Alt Text (Required):** Describe what is in the photo for visually impaired readers (e.g., *"Students holding handmade banners outside the administration building"*).
 4. **Caption (Optional):** Context about the moment captured.
-5. **Photographer Credit:** (e.g., `PHOTO: ELENA ROSTOVA / NOUVRESS`).
+5. **Photographer Credit:** (e.g., `PHOTO: ELENA ROSTOVA / NOUVRES`).
 
 > 📸 **Photo Sizing Made Easy:** You do not need to worry about manually resizing or cropping pictures! The website automatically fits landscape and tall portrait photos cleanly so they never stretch, distort, or push the text off the screen.
 
@@ -124,7 +124,7 @@ You are never limited to just one top photo. You can drop documentary photograph
 3. An inline photo block will appear in your article.
 4. Click **Choose existing** (to pick an image you already uploaded) or **Upload new** (to upload a photo from your computer).
 5. Enter a **Caption** (e.g., *"Demonstrators assemble on the quad steps."*).
-6. Enter a **Photographer Credit** (e.g., `PHOTO: MARCUS CHEN / NOUVRESS`).
+6. Enter a **Photographer Credit** (e.g., `PHOTO: MARCUS CHEN / NOUVRES`).
 7. Choose your **Display Width**:
    - **Standard Column:** Matches the exact width of your reading text.
    - **Wide Editorial:** Stretches slightly wider than the text column for dramatic, landscape documentary shots.
@@ -213,7 +213,7 @@ Breaking news often evolves throughout the day as university officials respond o
 
 Student journalists often cover contentious protests, labor strikes, or administrative investigations where reporting under their legal name could expose them to disciplinary retaliation, doxxing, or employer blacklisting.
 
-NOUVRESS includes a built-in safety shield:
+NOUVRES includes a built-in safety shield:
 
 1. In the dashboard left menu, click **Authors**.
 2. Click **Create New** (or edit an existing reporter).
@@ -251,7 +251,7 @@ Your dashboard separates **Writers (Authors)** from **Website Staff (Users)**:
 
 ## 8. Handling Corrections Transparently
 
-Trust is the single most valuable asset of an independent student newspaper. NOUVRESS never "stealth-edits" or quietly deletes mistakes.
+Trust is the single most valuable asset of an independent student newspaper. NOUVRES never "stealth-edits" or quietly deletes mistakes.
 
 If an article contains an inaccurate name, misspelled title, or incorrect fact:
 
@@ -296,4 +296,4 @@ You never have to worry about losing your articles or photographs if someone's l
 
 ---
 
-*NOUVRESS — Free, Independent, Student-Run Press.*
+*NOUVRES — Free, Independent, Student-Run Press.*

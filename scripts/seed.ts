@@ -39,7 +39,7 @@ async function seed() {
   }
 
   // 2. Seed Default Admin User
-  const adminEmail = process.env.ADMIN_EMAIL || 'editor@nouvress.org'
+  const adminEmail = process.env.ADMIN_EMAIL || 'editor@nouvres.org'
   const adminPassword = process.env.ADMIN_PASSWORD
   if (!adminPassword) {
     throw new Error('ADMIN_PASSWORD environment variable is required to seed the admin user.')
@@ -137,7 +137,7 @@ async function seed() {
         data: {
           alt: 'Open student forum on University Hall steps with speaker addressing crowd',
           caption: 'Student organizers address an open assembly regarding civil liberties and campus demonstration guidelines.',
-          photographerCredit: 'PHOTO: ELENA ROSTOVA / NOUVRESS ARCHIVE',
+          photographerCredit: 'PHOTO: ELENA ROSTOVA / NOUVRES ARCHIVE',
           sourceRightsNote: 'Original student documentary photography',
         },
         filePath: stepsPhotoPath,
@@ -226,7 +226,7 @@ async function seed() {
               blockType: 'mediaBlock',
               media: mediaSteps.id,
               caption: 'An open campus assembly convenes on the stone steps of University Hall as students deliberate collective demands.',
-              photographerCredit: 'PHOTO: ELENA ROSTOVA / NOUVRESS ARCHIVE',
+              photographerCredit: 'PHOTO: ELENA ROSTOVA / NOUVRES ARCHIVE',
               width: 'wide',
             },
           },

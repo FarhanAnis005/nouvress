@@ -3,7 +3,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact & Submissions — NOUVRESS',
+  title: 'Contact & Submissions — NOUVRES',
   description: 'Editorial contacts and submission guidelines for student contributors.',
 }
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
 
       <div className="page-prose">
         <p>
-          NOUVRESS welcomes story tips, documentary photography submissions, op-eds, and campus dispatches from students and campus workers.
+          NOUVRES welcomes story tips, documentary photography submissions, op-eds, and campus dispatches from students and campus workers.
         </p>
 
         <h2>Direct Editorial Contact</h2>

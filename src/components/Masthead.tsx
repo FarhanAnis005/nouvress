@@ -18,7 +18,7 @@ export const Masthead: React.FC = () => {
       </div>
 
       <h1 className="masthead-title">
-        <Link href="/">NOUVRESS</Link>
+        <Link href="/">NOUVRES</Link>
       </h1>
 
       <p className="masthead-subtitle">

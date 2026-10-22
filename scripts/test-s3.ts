@@ -21,7 +21,7 @@ async function testUpload() {
       data: {
         alt: 'Supabase S3 Bucket Test Upload',
         caption: 'Verifying automated Supabase storage connection',
-        photographerCredit: 'NOUVRESS SYSTEM TEST',
+        photographerCredit: 'NOUVRES SYSTEM TEST',
       },
       filePath: samplePhoto,
     })

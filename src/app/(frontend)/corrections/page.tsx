@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Policy on Corrections & Updates — NOUVRESS',
-  description: 'How factual corrections, clarifications, and story updates are handled by NOUVRESS.',
+  title: 'Policy on Corrections & Updates — NOUVRES',
+  description: 'How factual corrections, clarifications, and story updates are handled by NOUVRES.',
 }
 
 export default function CorrectionsPage() {
@@ -20,7 +20,7 @@ export default function CorrectionsPage() {
 
       <div className="page-prose">
         <p>
-          NOUVRESS is committed to factual truth, documentary integrity, and transparent accountability. Fast-moving reporting on protests, campus actions, and university policy can occasionally result in errors or rapidly developing facts. We do not stealth-edit stories or bury factual mistakes.
+          NOUVRES is committed to factual truth, documentary integrity, and transparent accountability. Fast-moving reporting on protests, campus actions, and university policy can occasionally result in errors or rapidly developing facts. We do not stealth-edit stories or bury factual mistakes.
         </p>
 
         <h2>Distinction Between Types of Edits</h2>

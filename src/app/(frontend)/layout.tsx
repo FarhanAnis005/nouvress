@@ -5,7 +5,7 @@ import { Masthead } from '@/components/Masthead'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'NOUVRESS — Independent Student Journalism',
+  title: 'NOUVRES — Independent Student Journalism',
   description: 'An independent student publication covering campus movements, protests, documentary photography & student perspectives.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'),
 }

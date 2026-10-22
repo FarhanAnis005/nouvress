@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About the Publication — NOUVRESS',
-  description: 'Editorial mission, independence, and reporting principles of NOUVRESS.',
+  title: 'About the Publication — NOUVRES',
+  description: 'Editorial mission, independence, and reporting principles of NOUVRES.',
 }
 
 export default function AboutPage() {
@@ -16,16 +16,16 @@ export default function AboutPage() {
         </Link>
       </div>
 
-      <h1 className="page-title">About NOUVRESS</h1>
+      <h1 className="page-title">About NOUVRES</h1>
 
       <div className="page-prose">
         <p>
-          <strong>NOUVRESS</strong> is an independent student journalism initiative created to document student movements, campus protests, direct actions, interviews, and grassroots perspectives.
+          <strong>NOUVRES</strong> is an independent student journalism initiative created to document student movements, campus protests, direct actions, interviews, and grassroots perspectives.
         </p>
 
         <h2>Mission &amp; Purpose</h2>
         <p>
-          Campus journalism is often restricted by university administration oversight, public relations concerns, or corporate media sensationalism. NOUVRESS was established to provide an independent, uncompromised public record of student life, assembly, dissent, and dialogue.
+          Campus journalism is often restricted by university administration oversight, public relations concerns, or corporate media sensationalism. NOUVRES was established to provide an independent, uncompromised public record of student life, assembly, dissent, and dialogue.
         </p>
         <p>
           We prioritise firsthand reporting from the ground: publishing original writing, documentary photography, and recorded speech directly from student organizers, eyewitnesses, and participants.

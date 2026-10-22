@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       limit: 1,
     })
     const category = res.docs[0]
-    if (!category) return { title: 'Category — NOUVRESS' }
+    if (!category) return { title: 'Category — NOUVRES' }
     return {
-      title: `${category.name} — NOUVRESS Archive`,
+      title: `${category.name} — NOUVRES Archive`,
       description: category.description || undefined,
     }
   } catch {
-    return { title: 'Category Archive — NOUVRESS' }
+    return { title: 'Category Archive — NOUVRES' }
   }
 }
 

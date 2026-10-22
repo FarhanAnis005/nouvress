@@ -32,14 +32,14 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     })
 
     const article = res.docs[0]
-    if (!article) return { title: 'Article Not Found — NOUVRESS' }
+    if (!article) return { title: 'Article Not Found — NOUVRES' }
 
     return {
-      title: `${article.title} — NOUVRESS`,
+      title: `${article.title} — NOUVRES`,
       description: article.seoDescription || article.subtitle || undefined,
     }
   } catch (e) {
-    return { title: 'NOUVRESS — Independent Student Journalism' }
+    return { title: 'NOUVRES — Independent Student Journalism' }
   }
 }
 

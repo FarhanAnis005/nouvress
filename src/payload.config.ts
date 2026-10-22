@@ -69,7 +69,7 @@ export default buildConfig({
   collections: [Users, Media, Authors, Categories, Articles],
   editor: lexicalEditor(),
   sharp,
-  secret: process.env.PAYLOAD_SECRET || 'nouvress-dev-secret-key-32-characters-long!!',
+  secret: process.env.PAYLOAD_SECRET || 'nouvres-dev-secret-key-32-characters-long!!',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },

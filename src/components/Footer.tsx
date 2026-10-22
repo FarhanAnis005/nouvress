@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
       </ul>
 
       <p className="footer-colophon">
-        <strong>NOUVRESS</strong> is an independent student-run journalism initiative.<br />
+        <strong>NOUVRES</strong> is an independent student-run journalism initiative.<br />
         Produced entirely by students without institutional censorship, algorithmic tracking, or AI-generated editorial copy.<br />
         All original photographs, reporting, and contributor rights reserved by their respective student creators.
       </p>

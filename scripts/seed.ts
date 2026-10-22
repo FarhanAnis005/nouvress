@@ -40,7 +40,10 @@ async function seed() {
 
   // 2. Seed Default Admin User
   const adminEmail = process.env.ADMIN_EMAIL || 'editor@nouvress.org'
-  const adminPassword = process.env.ADMIN_PASSWORD || 'EditorPassword2026!'
+  const adminPassword = process.env.ADMIN_PASSWORD
+  if (!adminPassword) {
+    throw new Error('ADMIN_PASSWORD environment variable is required to seed the admin user.')
+  }
   const adminName = process.env.ADMIN_NAME || 'Tasia Vance'
 
   const existingUsers = await payload.find({

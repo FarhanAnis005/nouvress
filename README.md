@@ -75,10 +75,11 @@ To access the staff writing room:
 3. Enter your staff email and password.
 4. Click **Log In**.
 
-| Staff Account Details | Default Setting | Note |
-| :--- | :--- | :--- |
-| **Email** | `editor@nouvress.org` | Can be customized in your staff settings |
-| **Password** | `EditorPassword2026!` | You can change your password anytime under **Account** |
+> 🔒 **Security Notice for Staff Logins:**
+> - Staff login credentials are strictly private and should **never** be published publicly or shared outside the newsroom.
+> - When running locally, your administrator credentials are set privately in your personal `.env` file on your computer (which is protected and never shared or uploaded to GitHub).
+> - Once logged in, any editor can change their password at any time by clicking **Account** at the bottom of the left sidebar.
+> - To grant access to fellow student reporters or editors, an administrator can create separate accounts with custom passwords directly under **Users** in the dashboard.
 
 ---
 

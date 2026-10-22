@@ -275,21 +275,7 @@ You never have to worry about losing your articles or photographs if someone's l
 
 ---
 
-## 10. How the Website Goes Live to the Public (Hosting)
-
-When you are ready to connect NOUVRESS to your real web address:
-
-1. **The Website Host (Vercel):** The site runs on **Vercel** (on their free plan). Vercel connects to your private GitHub repository and automatically deploys the website in seconds whenever updates are pushed.
-2. **Your Web Address (1984 Hosting):** Your domain name (e.g., `nouvress.org`) is managed through your domain provider (**1984 Hosting**). In the DNS settings of your 1984 account:
-   - Set an **A Record** pointing `@` to `76.76.21.21`
-   - Set a **CNAME Record** pointing `www` to `cname.vercel-dns.com.`
-3. **Free Automatic Security (SSL):** Vercel automatically creates and renews the security certificate (the green padlock in the web browser) so reader connections are always encrypted.
-
-*(For full step-by-step technical deployment instructions, see the companion guide in `deployment_and_editor_guide.md`).*
-
----
-
-## 11. Frequently Asked Questions & Troubleshooting (FAQ)
+## 10. Frequently Asked Questions & Troubleshooting (FAQ)
 
 ### Q: Why isn't there a "Login" link on the home page?
 > **Answer:** This is by design! Having no public login link keeps the front page looking like a genuine, uncluttered early-web newspaper, and prevents automated bots from finding your login page. Editors simply go directly to `/admin` in their browser address bar.
@@ -310,10 +296,5 @@ When you are ready to connect NOUVRESS to your real web address:
 > **Answer:** Open the article in the dashboard. At the bottom, click the **Options** menu (or **Delete**) to remove it or change its status back from "Published" to "Draft".
 
 ---
-
-## 🤝 Need Editorial or Technical Support?
-
-- **Editorial Questions & Story Pitches:** Contact the editorial board via the [Contact Page](/contact).
-- **Technical Guides & Server Documentation:** Detailed technical architecture, backup procedures, and server keys are documented in [`deployment_and_editor_guide.md`](./deployment_and_editor_guide.md).
 
 *NOUVRESS — Free, Independent, Student-Run Press.*

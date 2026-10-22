@@ -16,21 +16,6 @@ export const Media: CollectionConfig = {
   upload: {
     staticDir: path.resolve(process.cwd(), 'public/media'),
     mimeTypes: ['image/*'],
-    imageSizes: [
-      {
-        name: 'thumbnail',
-        width: 320,
-        height: 240,
-        position: 'centre',
-      },
-      {
-        name: 'editorial',
-        width: 900,
-        height: undefined,
-        position: 'centre',
-      },
-    ],
-    adminThumbnail: 'thumbnail',
   },
   fields: [
     {

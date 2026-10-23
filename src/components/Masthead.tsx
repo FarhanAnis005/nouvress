@@ -29,7 +29,7 @@ export const Masthead: React.FC = () => {
             textDecoration: 'none',
           }}
         >
-          <Logo variant="badge" size="clamp(38px, 6vw, 56px)" />
+          {/* <Logo variant="badge" size="clamp(38px, 6vw, 56px)" /> */}
           <span>NOUVRES</span>
         </Link>
       </h1>

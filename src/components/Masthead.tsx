@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { Logo } from './Logo'
 
 export const Masthead: React.FC = () => {
   const today = new Intl.DateTimeFormat('en-GB', {
@@ -18,7 +19,19 @@ export const Masthead: React.FC = () => {
       </div>
 
       <h1 className="masthead-title">
-        <Link href="/">NOUVRES</Link>
+        <Link
+          href="/"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '14px',
+            textDecoration: 'none',
+          }}
+        >
+          <Logo variant="badge" size="clamp(38px, 6vw, 56px)" />
+          <span>NOUVRES</span>
+        </Link>
       </h1>
 
       <p className="masthead-subtitle">
